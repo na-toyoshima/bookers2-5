@@ -5,4 +5,7 @@ Rails.application.routes.draw do
   get 'home/about' => 'homes#about'
   resources :books, only:[:new, :create, :show, :index, :destroy, :edit, :update]
   resources :users, only:[:show, :index, :edit, :update]
+
+  get '/search', to: 'searches#search'
+
 end
